@@ -19,6 +19,21 @@ python train.py --data dataset/preprocessed --batch 4 --epochs 30
 python predict/video_predict.py
 ```
 
+## Quick Start for ubuntu cuda with UV manager 
+
+```bash
+git clone <repository-url>
+cd tracknet-v4-pytorch
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+source ~/.bashrc
+
+uv sync
+uv run preprocessing/video_to_heatmap.py --source dataset/raw --output dataset/preprocessed
+uv run train.py --data dataset/preprocessed --batch 4 --epochs 30
+
+```
+
 ## Project Structure
 
 ```

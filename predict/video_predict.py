@@ -6,6 +6,9 @@ import cv2
 import torch
 import os
 from tqdm import tqdm
+import argparse
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from model.tracknet_v4 import TrackNet
 
 
