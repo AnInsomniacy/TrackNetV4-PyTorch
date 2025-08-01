@@ -75,6 +75,18 @@ PYTHONPATH=. python predict/video_predict.py
 
 # Single frame prediction  
 PYTHONPATH=. python predict/single_frame_predict.py
+
+# Stream video  prediction without  visualize
+
+PYTHONPATH=. python run predict/streem_video_predict.py --model_path checkpoints/best_model.pth  --video_path demo.mp4 --output_dir ./predict_video
+
+# Stream video  prediction with  visualize
+
+PYTHONPATH=. python run predict/streem_video_predict.py --model_path checkpoints/best_model.pth  --video_path demo.mp4 --output_dir ./predict_video --visualize
+
+# Stream video  prediction save only predict.csv
+PYTHONPATH=. python run predict/streem_video_predict.py --model_path checkpoints/best_model.pth  --video_path demo.mp4 --output_dir ./predict_video --only_csv
+
 ```
 
 **Note:** Modify model and input paths in prediction scripts as needed for your data.
